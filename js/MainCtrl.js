@@ -1,7 +1,9 @@
 angular
   .module('quoteBook')
-  .controller('MainCtrl', function($scope) {
+  .controller('MainCtrl', function($scope, dataService) {
 
-    $scope.thisAppIsBroken = "this app works biiitch"; 
+    $scope.thisAppIsBroken = "this app works biiitch";
+
+    $scope.quotes = dataService.getData();
 
   });
