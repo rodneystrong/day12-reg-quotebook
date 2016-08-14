@@ -1,5 +1,5 @@
 angular
-  .module('quoteBook', []);
+  .module('quoteBook')
   .service('dataService', function() {
 
     var quotes = [
@@ -11,5 +11,21 @@ angular
       { text: 'Life is what happens to you while you\'re busy making other plans.', author: 'John Lennon'},
       { text: 'What even is a jQuery?', author: 'Tyler S. McGinnis'}
     ];
+
+    this.getData = function() {
+      return quotes;
+    }
+
+    this.addData = function(obj) {
+      for(var prop in obj) {
+        // verify object has obj[prop]
+        // quotes.push(obj)
+      }
+    }
+
+    this.removeData = function(/*quote text*/) {
+      //loop through quotes array
+      //remove quote text argument
+    }
 
   });
