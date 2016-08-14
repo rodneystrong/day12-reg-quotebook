@@ -22,9 +22,12 @@ angular
       }
     }
 
-    this.removeData = function(/*quote text*/) {
-      //loop through quotes array
-      //remove quote text argument
-    }
+    this.removeData = function(textToDelete) {
+      for(i=0; i<quotes.length; i++) {
+        if(quotes[i].text.toLowerCase() === textToDelete.toLowerCase()) {
+          quotes.splice(i--, 1);
+        }
+      }
+    };
 
   });
