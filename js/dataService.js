@@ -16,10 +16,9 @@ angular
       return quotes;
     }
 
-    this.addData = function(obj) {
-      for(var prop in obj) {
-        // verify object has obj[prop]
-        // quotes.push(obj)
+    this.addData = function(newQuote) {
+      if(newQuote.text && newQuote.author) {
+        quotes.push(newQuote);
       }
     }
 
