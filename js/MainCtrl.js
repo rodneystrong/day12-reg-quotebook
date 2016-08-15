@@ -17,6 +17,7 @@ angular
         text: $scope.newQuoteText,
         author: $scope.newAuthor
       }
+      //when i comment the section below, it still works.. why?
       if (dataService.addData(newQuote)) {
         // $scope.newQuoteText = '';
         // $scope.newAuthor = '';
