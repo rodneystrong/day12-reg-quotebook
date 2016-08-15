@@ -19,12 +19,13 @@
 
 
 </div>
-
-  <div ng-repeat="quote in quotes | filter: filterQuotes track by $index">
+<div class="grid-box">
+  <div ng-repeat="quote in quotes track by $index" class="single-box">
     <h3>{{quote.text}}</h3>
     <p>{{quote.author}}</p>
     <button ng-click="removeData(quote.text)" type="button" name="button">I hate this</button>
   </div>
+</div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
   <script src="js/app.js"></script>

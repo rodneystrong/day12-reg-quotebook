@@ -18,7 +18,10 @@ angular
         author: $scope.newAuthor
       }
       dataService.addData(newQuote);
+      localStorage.setItem('newQuoteData', newQuote);
+      console.log(localStorage.getItem('newQuoteData'));
       //when i comment the section below, it still works.. why?
+      //this part clears the input fields
       if (dataService.addData(newQuote)) {
             $scope.newQuoteText = '';
             $scope.newAuthor = '';

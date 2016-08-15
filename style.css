@@ -1,3 +1,15 @@
 .better-font {
   font-family: futura, sans-serif;
 }
+
+.grid-box {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start | space-around;
+}
+
+.single-box {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
