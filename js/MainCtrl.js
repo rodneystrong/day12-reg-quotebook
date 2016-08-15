@@ -6,4 +6,8 @@ angular
 
     $scope.quotes = dataService.getData();
 
+    $scope.removeData = function(textToDelete) {
+      dataService.removeData(textToDelete);
+    }
+
   });

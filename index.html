@@ -9,9 +9,17 @@
 
   {{thisAppIsBroken}}
 
+<div class="user-inputs">
+  <input ng-model="newQuote" type="text" name="name" palceholder="What you got to say">
+  <input ng-model="newAuthor" type="text" name="name" palceholder="who said it">
+  <button type="button" name="add-quote">Add your own</button>
+
+</div>
+
   <div ng-repeat="quote in quotes">
     <h3>{{quote.text}}</h3>
     <p>{{quote.author}}</p>
+    <button ng-click="removeData(quote.text)" type="button" name="button">I hate this</button>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
