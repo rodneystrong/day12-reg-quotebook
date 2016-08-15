@@ -8,6 +8,7 @@ angular
 
     $scope.removeData = function(textToDelete) {
       dataService.removeData(textToDelete);
+      // localStorage.removeItem('newQuoteData', newQuote);
     }
 
     //create a function that uses the addData function from dataService
@@ -18,11 +19,13 @@ angular
         author: $scope.newAuthor
       }
       dataService.addData(newQuote);
+
+      //adds item to local storage
       localStorage.setItem('newQuoteData', newQuote);
       console.log(localStorage.getItem('newQuoteData'));
       //when i comment the section below, it still works.. why?
       //this part clears the input fields
-      if (dataService.addData(newQuote)) {
+      if (newQuote.text) {
             $scope.newQuoteText = '';
             $scope.newAuthor = '';
       };

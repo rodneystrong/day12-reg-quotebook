@@ -20,6 +20,8 @@ angular
       if(newQuote.text && newQuote.author) {
         quotes.push(newQuote);
       }
+      localStorage.setItem('newQuoteData', newQuote);
+      console.log(quotes)
     }
 
     this.removeData = function(textToDelete) {

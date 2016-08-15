@@ -12,7 +12,7 @@
 <div class="user-inputs">
   <input ng-model="newQuoteText" type="text" placeholder="What you got to say">
   <input ng-model="newAuthor" type="text" name="name" placeholder="who said it">
-  <button ng-click="addData()"type="button" name="add-quote">Add your own</button>
+  <button ng-click="addData(newQuoteText, newAuthor)" type="button" name="add-quote">Add your own</button>
   <div>
     <input ng-model="filterQuotes" type="text" placeholder="filter this yo">
   </div>
@@ -20,7 +20,7 @@
 
 </div>
 <div class="grid-box">
-  <div ng-repeat="quote in quotes track by $index" class="single-box">
+  <div ng-repeat="quote in quotes | filter: filterQuotes track by $index" class="single-box">
     <h3>{{quote.text}}</h3>
     <p>{{quote.author}}</p>
     <button ng-click="removeData(quote.text)" type="button" name="button">I hate this</button>
