@@ -10,9 +10,9 @@
   {{thisAppIsBroken}}
 
 <div class="user-inputs">
-  <input ng-model="newQuote" type="text" name="name" palceholder="What you got to say">
+  <input ng-model="newQuoteText" type="text" name="name" palceholder="What you got to say">
   <input ng-model="newAuthor" type="text" name="name" palceholder="who said it">
-  <button type="button" name="add-quote">Add your own</button>
+  <button ng-click="addData()"type="button" name="add-quote">Add your own</button>
 
 </div>
 

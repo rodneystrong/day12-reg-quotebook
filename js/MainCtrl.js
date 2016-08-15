@@ -10,4 +10,17 @@ angular
       dataService.removeData(textToDelete);
     }
 
+    //create a function that uses the addData function from dataService
+    //you need to create var for the quote and author inputs
+    $scope.addData = function() {
+      var newQuote = {
+        text: $scope.newQuoteText,
+        author: $scope.newAuthor
+      }
+      if (dataService.addData(newQuote)) {
+        // $scope.newQuoteText = '';
+        // $scope.newAuthor = '';
+      };
+    }
+
   });
