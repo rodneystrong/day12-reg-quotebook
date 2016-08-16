@@ -2,7 +2,7 @@ angular
   .module('quoteBook')
   .service('dataService', function() {
 
-    var localItems = localStorage.getItem('newQuoteData');
+    var localItems = JSON.parse(localStorage.getItem('newQuoteData'));
 
     var quotes = [
       { text: 'Life isn\'t about getting and having, it\'s about giving and being.', author: 'Kevin Kruse'},
@@ -12,7 +12,7 @@ angular
       { text: 'The most difficult thing is the decision to act, the rest is merely tenacity.', author: 'Amelia Earhart'},
       { text: 'Life is what happens to you while you\'re busy making other plans.', author: 'John Lennon'},
       { text: 'What even is a jQuery?', author: 'Tyler S. McGinnis'},
-      
+
     ];
 
     this.getData = function() {
