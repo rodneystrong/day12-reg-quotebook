@@ -14,7 +14,12 @@
   <input ng-model="newAuthor" type="text" name="name" placeholder="who said it">
   <button ng-click="addData(newQuoteText, newAuthor)" type="button" name="add-quote">Add your own</button>
   <div>
-    <input ng-model="filterQuotes" type="text" placeholder="filter this yo">
+    <input ng-model="filterQuotes.text" type="text" placeholder="filter by text">
+    <input ng-model="filterQuotes.author" type="text" placeholder="filter by author">
+  </div>
+
+  <div class="whatever">
+    <button ng-click="removeAllLocalStorage()" type="button">Clear the localStorage</button>
   </div>
 
 

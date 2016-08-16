@@ -31,4 +31,9 @@ angular
       };
     }
 
+    //clears localStorage
+    $scope.removeAllLocalStorage = function() {
+      dataService.removeAllLocalStorage();
+    }
+
   });
