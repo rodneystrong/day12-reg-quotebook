@@ -1,0 +1,15 @@
+.nice-font {
+  font-family: futura;
+}
+
+.grid {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+}
+
+.single-box {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
