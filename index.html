@@ -11,12 +11,17 @@
 
   <div>{{thisAppIsBroken}}</div>
 
+<div>
   <input ng-model="newQuoteText" type="text" name="name" placeholder="Quote text" autofocus>
   <input ng-model="newQuoteAuthor" type="text" name="name" placeholder="Author">
   <button ng-click="addQuote()" type="button" name="button">Add the quote</button>
-
+</div>
+<div class="filter">
+  <input ng-model="filterQuote.text" type="text" name="name" value="" placeholder="Filter by quote">
+  <input ng-model="filterQuote.author" type="text" name="name" value="" placeholder="Filter by author">
+</div>
   <div class="grid">
-    <div ng-repeat="quote in quotes" class="item">
+    <div ng-repeat="quote in quotes | filter: filterQuote" class="item">
       <h2>{{quote.text}}</h2>
       <h3>{{quote.author}}</h3>
       <button ng-click="removeQuote(quote.text)" type="button" name="button">Remove this</button>
