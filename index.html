@@ -10,6 +10,11 @@
 <body ng-controller="MainCtrl">
   {{thisAppIsBroken}}
 
+  <div ng-repeat="quote in quotes" class="grid">
+    <h2>{{quote.text}}</h2>
+    <h3>{{quote.author}}</h3>
+  </div>
+
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
  <script src="js/app.js"></script>
  <script src="js/MainCtrl.js"></script>
