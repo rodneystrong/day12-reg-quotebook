@@ -24,4 +24,6 @@ angular
       dataService.removeQuote(textToDelete)
     }
 
+    $scope.showMe = false;
+
   })
