@@ -19,6 +19,7 @@
     <div ng-repeat="quote in quotes" class="item">
       <h2>{{quote.text}}</h2>
       <h3>{{quote.author}}</h3>
+      <button ng-click="removeQuote(quote.text)" type="button" name="button">Remove this</button>
     </div>
   </div>
 

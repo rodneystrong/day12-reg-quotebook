@@ -9,5 +9,6 @@ body {
 }
 
 .item {
+  margin-right: 10px;
   max-width: 200px;
 }

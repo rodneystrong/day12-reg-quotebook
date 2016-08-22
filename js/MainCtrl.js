@@ -20,4 +20,8 @@ angular
       $scope.newQuoteAuthor='';
     }
 
+    $scope.removeQuote = function(textToDelete) {
+      dataService.removeQuote(textToDelete)
+    }
+
   })

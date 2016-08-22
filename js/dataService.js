@@ -1,6 +1,6 @@
 angular
   .module('quotebook')
-  .service('dataService', function() {
+  .service('dataService', function($http) {
 
     var quotes = [
       { text: 'Life isn\'t about getting and having, it\'s about giving and being.', author: 'Kevin Kruse'},
@@ -22,8 +22,17 @@ angular
       }
     }
 
-    this.removeQuote = function() {
-
+    this.removeQuote = function(textToDelete) {
+      for(i=0; i<quotes.length; i++) {
+        if(quotes[i].text.toLowerCase() === textToDelete.toLowerCase()) {
+          quotes.splice(i, 1);
+          console.log(i);
+          //the code below is because we need the loop to
+          //start from the beginning again to check for duplicates.
+          //what if the same quote occured
+          //i--;
+        }
+      }
     }
 
   })
