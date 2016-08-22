@@ -5,5 +5,9 @@ body {
 .grid {
   display: flex;
   flex-flow: wrap;
-  
+  justify-content: flex-start;
+}
+
+.item {
+  max-width: 200px;
 }
