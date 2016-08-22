@@ -15,6 +15,9 @@ angular
         author: $scope.newQuoteAuthor
       }
       dataService.addQuote(newQuote);
+      //setting input fields to blank after entering quote
+      $scope.newQuoteText='';
+      $scope.newQuoteAuthor='';
     }
 
   })
