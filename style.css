@@ -1,0 +1,9 @@
+body {
+  font-family: futura;
+}
+
+.grid {
+  display: flex;
+  flex-flow: wrap;
+  
+}
