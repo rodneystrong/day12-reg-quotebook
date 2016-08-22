@@ -24,6 +24,8 @@ angular
       dataService.removeQuote(textToDelete)
     }
 
+    //setting the intial visibility of the filter inputs to
+    //not display
     $scope.showMe = false;
 
   })
